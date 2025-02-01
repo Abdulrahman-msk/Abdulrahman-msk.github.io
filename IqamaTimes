@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iqama Times</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f8f8;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 24px;
+        }
+        .prayer-time {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .countdown {
+            font-size: 16px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bismillah-ir-Rahman-ir-Rahim</h1>
+        <h2>Iqama Times - Toronto (Local Time)</h2>
+        <div id="times">
+            <div class="prayer-time">Fajr: 6:40 AM <span class="countdown" id="fajr"></span></div>
+            <div class="prayer-time">Dhuhr: 12:45 PM <span class="countdown" id="dhuhr"></span></div>
+            <div class="prayer-time">Asr: 3:30 PM <span class="countdown" id="asr"></span></div>
+            <div class="prayer-time">Maghrib: Adhan + 5 Minutes <span class="countdown" id="maghrib"></span></div>
+            <div class="prayer-time">Isha: 7:00 PM <span class="countdown" id="isha"></span></div>
+        </div>
+    </div>
+    <script>
+        function updateCountdowns() {
+            const prayerTimes = {
+                fajr: "06:40",
+                dhuhr: "12:45",
+                asr: "15:30",
+                maghrib: "17:45", // Example Adhan time
+                isha: "19:00"
+            };
+            
+            const now = new Date();
+            const currentTime = now.getHours() * 60 + now.getMinutes();
+            
+            for (const prayer in prayerTimes) {
+                const [hours, minutes] = prayerTimes[prayer].split(":").map(Number);
+                const prayerTimeInMinutes = hours * 60 + minutes;
+                const diff = prayerTimeInMinutes - currentTime;
+                
+                if (diff > 0) {
+                    document.getElementById(prayer).textContent = `(${Math.floor(diff / 60)}h ${diff % 60}m left)`;
+                } else {
+                    document.getElementById(prayer).textContent = "(Completed)";
+                }
+            }
+        }
+        
+        setInterval(updateCountdowns, 60000);
+        updateCountdowns();
+    </script>
+</body>
+</html>
