@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iqama Times</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f8f8;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 24px;
+        }
+        .prayer-time {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+        .countdown {
+            font-size: 16px;
+            color: #d9534f;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Iqama Times - Toronto (Local Time)</h1>
+        <p><strong>Effective: 1 Feb 2025</strong></p>
+        
+        <div class="prayer-time">Fajr: 6:40 AM <span class="countdown" id="fajr-countdown"></span></div>
+        <div class="prayer-time">Dhuhr: 12:45 PM <span class="countdown" id="dhuhr-countdown"></span></div>
+        <div class="prayer-time">Asr: 3:30 PM <span class="countdown" id="asr-countdown"></span></div>
+        <div class="prayer-time">Maghrib: Adhan + 5 min <span class="countdown" id="maghrib-countdown"></span></div>
+        <div class="prayer-time">Isha: 7:00 PM <span class="countdown" id="isha-countdown"></span></div>
+    </div>
+
+    <script>
+        function updateCountdown(prayerTime, elementId) {
+            let now = new Date();
+            let prayer = new Date();
+            let [hour, minute] = prayerTime.split(":");
+            let ampm = prayerTime.slice(-2);
+
+            hour = parseInt(hour);
+            minute = parseInt(minute);
+
+            if (ampm === "PM" && hour !== 12) hour += 12;
+            if (ampm === "AM" && hour === 12) hour = 0;
+
+            prayer.setHours(hour, minute, 0, 0);
+
+            if (now > prayer) {
+                prayer.setDate(prayer.getDate() + 1);
+            }
+
+            let diff = prayer - now;
+            let hours = Math.floor(diff / (1000 * 60 * 60));
+            let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            let seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+            document.getElementById(elementId).textContent = `(${hours}h ${minutes}m ${seconds}s left)`;
+
+            setTimeout(() => updateCountdown(prayerTime, elementId), 1000);
+        }
+
+        updateCountdown("6:40 AM", "fajr-countdown");
+        updateCountdown("12:45 PM", "dhuhr-countdown");
+        updateCountdown("3:30 PM", "asr-countdown");
+        updateCountdown("6:40 PM", "maghrib-countdown"); // Assuming Maghrib adhan time
+        updateCountdown("7:00 PM", "isha-countdown");
+    </script>
+</body>
+</html>
