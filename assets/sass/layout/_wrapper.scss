@@ -26,7 +26,7 @@
         background-repeat: repeat, no-repeat, no-repeat;
         background-attachment: scroll, scroll, scroll;
         z-index: -1;
-        opacity: 50; /* Make background initially invisible */
+        opacity: 0; /* Make background initially invisible */
         transition: opacity 1s ease-in-out; /* Transition opacity for fade effect */
     }
 
