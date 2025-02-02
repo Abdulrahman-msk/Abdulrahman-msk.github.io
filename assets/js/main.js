@@ -120,6 +120,7 @@
 	// Scrolly.
 		$('.scrolly').scrolly();
 
+	$wrapper.css('background-color', '#000000');
 	// Background.
 		$wrapper._parallax(0.925);
 
