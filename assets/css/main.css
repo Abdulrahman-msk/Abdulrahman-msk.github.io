@@ -2222,8 +2222,8 @@ input, select, textarea {
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			box-shadow: inset 0 0 0 2px #18bfef;
-			color: #18bfef !important;
+			box-shadow: inset 0 0 0 2px #e9e9cf;
+			color: #e9e9cf !important;
 		}
 
 		input[type="submit"].primary,
@@ -2233,7 +2233,7 @@ input, select, textarea {
 		.button.primary {
 			background-color: #212931;
 			box-shadow: none;
-			color: #ffffff !important;
+			color: #6bb0dd !important;
 		}
 
 			input[type="submit"].primary:hover,
@@ -2241,7 +2241,7 @@ input, select, textarea {
 			input[type="button"].primary:hover,
 			button.primary:hover,
 			.button.primary:hover {
-				background-color: #18bfef;
+				background-color: #e9e9cf;
 			}
 
 /* Form */
@@ -2897,15 +2897,15 @@ input, select, textarea {
 	}
 
 	ul.icons li a.icon:hover:before {
-		color: #18bfef;
+		color: #e9e9cf;
 	}
 
 	ul.icons.alt li .icon:before {
-		box-shadow: inset 0 0 0 2px #eeeeee;
+		box-shadow: inset 0 0 0 2px #6bb0dd;
 	}
 
 	ul.icons.alt li a.icon:hover:before {
-		box-shadow: inset 0 0 0 2px #18bfef;
+		box-shadow: inset 0 0 0 2px #e9e9cf;
 	}
 
 /* Section/Article */
@@ -3211,15 +3211,15 @@ input, select, textarea {
 
 			.pagination a:hover + a,
 			.pagination a:hover + span {
-				border-left-color: #18bfef;
+				border-left-color: #e9e9cf;
 			}
 
 		.pagination a.active {
-			background-color: #eeeeee;
+			background-color: #6bb0dd;
 		}
 
 	.pagination span {
-		color: #eeeeee;
+		color: #6bb0dd;
 	}
 
 /* Wrapper */
