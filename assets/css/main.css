@@ -4591,7 +4591,7 @@ input, select, textarea {
 		}
 
 			#navPanel .links li {
-				border-top: solid 2px #eeeeee;
+				border-top: solid 2px #000000;
 			}
 
 				#navPanel .links li a {
