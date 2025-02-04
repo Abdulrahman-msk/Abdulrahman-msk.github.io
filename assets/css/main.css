@@ -3614,7 +3614,7 @@ input, select, textarea {
 /* Nav */
 
 	#nav {
-		color: #ffffff;
+		color: #000000;
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
@@ -3636,7 +3636,7 @@ input, select, textarea {
 	}
 
 		#nav ul.divided li {
-			border-top-color: #ffffff;
+			border-top-color: #000000;
 		}
 
 		#nav ul.icons li a.icon:hover:before {
@@ -3652,11 +3652,11 @@ input, select, textarea {
 		}
 
 		#nav input, #nav select, #nav textarea {
-			color: #ffffff;
+			color: #000000;
 		}
 
 		#nav a {
-			color: #ffffff;
+			color: #000000;
 			border-bottom-color: rgba(255, 255, 255, 0.5);
 		}
 
@@ -3666,7 +3666,7 @@ input, select, textarea {
 			}
 
 		#nav strong, #nav b {
-			color: #ffffff;
+			color: #000000;
 		}
 
 		#nav h1, #nav h2, #nav h3, #nav h4, #nav h5, #nav h6 {
