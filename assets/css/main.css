@@ -2902,7 +2902,7 @@ input, select, textarea {
 	}
 
 	ul.icons.alt li .icon:before {
-		box-shadow: inset 0 0 0 2px #e5e5e5;
+		box-shadow: inset 0 0 0 2px #e2e2e2;
 	}
 
 	ul.icons.alt li a.icon:hover:before {
@@ -3644,7 +3644,7 @@ input, select, textarea {
 		}
 
 		#nav ul.icons.alt li .icon:before {
-			box-shadow: inset 0 0 0 2px #000000;
+			box-shadow: inset 0 0 0 2px #e2e2e2;
 		}
 
 		#nav ul.icons.alt li a.icon:hover:before {
@@ -4131,7 +4131,7 @@ input, select, textarea {
 		}
 
 		#footer ul.icons.alt li .icon:before {
-			box-shadow: inset 0 0 0 2px #000000;
+			box-shadow: inset 0 0 0 2px #e2e2e2;
 		}
 
 		#footer ul.icons.alt li a.icon:hover:before {
