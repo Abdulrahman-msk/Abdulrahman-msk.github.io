@@ -2594,6 +2594,9 @@ input, select, textarea {
 			font-family: 'Font Awesome 5 Brands';
 		}
 
+		ul.links li a:hover {
+			color: #6bb0dd; /* Change this to your preferred hover color */
+		}
 /* Image */
 
 	.image {
