@@ -4539,7 +4539,7 @@ input, select, textarea {
 		}
 
 			#navPanelToggle.alt:hover {
-				background-color: #ffffff;
+				background-color: #000000;
 			}
 
 		@media screen and (max-width: 980px) {
