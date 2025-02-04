@@ -3652,11 +3652,11 @@ input, select, textarea {
 		}
 
 		#nav input, #nav select, #nav textarea {
-			color: #000000;
+			color: #ffffff;
 		}
 
 		#nav a {
-			color: #000000;
+			color: #ffffff;
 			border-bottom-color: rgba(255, 255, 255, 0.5);
 		}
 
