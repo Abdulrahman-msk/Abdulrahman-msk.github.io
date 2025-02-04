@@ -3614,7 +3614,7 @@ input, select, textarea {
 /* Nav */
 
 	#nav {
-		color: #000000;
+		color: #ffffff;
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
@@ -3636,7 +3636,7 @@ input, select, textarea {
 	}
 
 		#nav ul.divided li {
-			border-top-color: #000000;
+			border-top-color: #ffffff;
 		}
 
 		#nav ul.icons li a.icon:hover:before {
@@ -3652,11 +3652,11 @@ input, select, textarea {
 		}
 
 		#nav input, #nav select, #nav textarea {
-			color: #000000;
+			color: #ffffff;
 		}
 
 		#nav a {
-			color: #000000;
+			color: #ffffff;
 			border-bottom-color: rgba(255, 255, 255, 0.5);
 		}
 
@@ -3666,7 +3666,7 @@ input, select, textarea {
 			}
 
 		#nav strong, #nav b {
-			color: #000000;
+			color: #ffffff;
 		}
 
 		#nav h1, #nav h2, #nav h3, #nav h4, #nav h5, #nav h6 {
@@ -3730,7 +3730,7 @@ input, select, textarea {
 					}
 
 				#nav ul.links li.active {
-					background-color: #ffffff;
+					background-color: #6bb0dd;
 				}
 
 					#nav ul.links li.active a {
