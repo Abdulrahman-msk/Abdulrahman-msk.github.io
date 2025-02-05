@@ -46,6 +46,44 @@
 			}
 		</style>
 
+
+		<title>Iqama Countdown Timer</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 100vh;
+				background-color: #f4f4f4;
+			}
+			.countdown-container {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+				background: rgba(0, 0, 0, 0.1);
+				padding: 15px 25px;
+				border-radius: 10px;
+				font-size: 24px;
+				font-weight: bold;
+			}
+			.icon {
+				font-size: 28px;
+			}
+			.countdown {
+				transition: transform 0.3s ease-in-out;
+			}
+			.pulsing {
+				animation: pulse 1s infinite;
+			}
+			@keyframes pulse {
+				0% { transform: scale(1); opacity: 1; }
+				50% { transform: scale(1.1); opacity: 0.7; }
+				100% { transform: scale(1); opacity: 1; }
+			}
+		</style>
+
+
 	</head>
 	<body class="is-preload">
 
@@ -135,10 +173,52 @@
 								    </div>
 								</div> <br><br> -->
 
-								<p style="text-align: center; font-size: 18px;">
+
+								<!-- <p style="text-align: center; font-size: 18px;">
 								    <strong id="next-iqama">Next Iqama in: </strong><span style="margin-left: 10px;" id="countdown">Loading...</span>
-								</p>
+								</p> -->
+
+								<div class="countdown-container">
+									<span class="icon">🕌</span>
+									<span id="countdown" class="countdown">Loading...</span>
+								</div>
+							
+								<script>
+									function startCountdown(targetTime) {
+										function updateTimer() {
+											let now = new Date();
+											let timeDiff = targetTime - now;
+											
+											if (timeDiff <= 0) {
+												document.getElementById("countdown").textContent = "It's time!";
+												document.getElementById("countdown").classList.remove("pulsing");
+												clearInterval(timerInterval);
+												return;
+											}
+											
+											let minutes = Math.floor(timeDiff / 60000);
+											let seconds = Math.floor((timeDiff % 60000) / 1000);
+											let displayTime = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+											
+											document.getElementById("countdown").textContent = displayTime;
+											
+											if (minutes === 0 && seconds <= 59) {
+												document.getElementById("countdown").classList.add("pulsing");
+											} else {
+												document.getElementById("countdown").classList.remove("pulsing");
+											}
+										}
+										
+										updateTimer();
+										let timerInterval = setInterval(updateTimer, 1000);
+									}
+									
+									let iqamaTime = new Date();
+									iqamaTime.setMinutes(iqamaTime.getMinutes() + 5); // Example: 5 minutes from now
+									startCountdown(iqamaTime);
+								</script>
 								
+					
 								<script src="/assets/js/script.js"></script>
 
 								<div style="text-align: center;">
