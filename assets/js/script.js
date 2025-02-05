@@ -291,7 +291,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .catch(error => console.error("Error loading prayer times:", error));
 });
 
-function updateCountdown(targetTime, nextPrayer) {
+function updateCountdown(targetTime) {
     let now = new Date();
     let diff = Math.floor((targetTime - now) / 1000);
 
@@ -312,7 +312,9 @@ function updateCountdown(targetTime, nextPrayer) {
     let minutes = Math.floor((diff % 3600) / 60);
     let seconds = diff % 60;
 
-    countdownElement.innerText = `${nextPrayer} is in: ${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+    // **Only update the countdown with the timer**
+    countdownElement.innerText = 
+        `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
 
     if (minutes === 0 && seconds <= 59) {
         countdownElement.classList.add("pulsing");
