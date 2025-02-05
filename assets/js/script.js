@@ -80,7 +80,7 @@ function updateCountdown(targetTime) {
     let diff = Math.floor((targetTime - now) / 1000);
 
     if (diff <= 0) {
-        document.getElementById("countdown").innerText = "Get up for Salat!";
+        document.getElementById("countdown").innerText = "Establish the Prayer!";
         return;
     }
 
