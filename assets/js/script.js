@@ -257,7 +257,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 "Dhuhr": "12:45 PM",
                 "Asr": "3:30 PM",
                 "Maghrib": maghribIqamaTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-                "Isha": "7:00 PM"
+                "Isha": "7:10 PM"
             };
 
             let now = new Date();
@@ -281,7 +281,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
 
             if (nextPrayer) {
-                document.getElementById("next-iqama").innerText = `${nextPrayer} is in:`;
+                document.getElementById("next-iqama").innerText = ``;
                 updateCountdown(nextIqamaTime, nextPrayer);
                 setInterval(() => updateCountdown(nextIqamaTime, nextPrayer), 1000);
             } else {
