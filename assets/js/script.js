@@ -281,7 +281,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
 
             if (nextPrayer) {
-                document.getElementById("next-iqama").innerText = ``;
+                document.getElementById("next-iqama");
                 updateCountdown(nextIqamaTime, nextPrayer);
                 setInterval(() => updateCountdown(nextIqamaTime, nextPrayer), 1000);
             } else {
