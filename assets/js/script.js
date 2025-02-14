@@ -299,7 +299,7 @@ function updateCountdown(targetTime, nextPrayer) {
     countdownElement.style.padding = "10px 20px";
     countdownElement.style.borderRadius = "8px";
     countdownElement.style.background = "rgba(0, 0, 0, 0.1)";
-    countdownElement.style.display = "inline-block";
+    countdownElement.style.display = "inline";
     countdownElement.style.fontWeight = "bold";
 
     if (diff <= 0) {
