@@ -294,7 +294,6 @@ document.addEventListener("DOMContentLoaded", function () {
 function updateCountdown(targetTime, nextPrayer) {
     let now = new Date();
     let diff = Math.floor((targetTime - now) / 1000);
-
     const countdownElement = document.getElementById("countdown");
     countdownElement.style.padding = "10px 20px";
     countdownElement.style.borderRadius = "8px";
