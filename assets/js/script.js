@@ -313,7 +313,7 @@ function updateCountdown(targetTime, nextPrayer) {
 
     countdownElement.innerText = `${nextPrayer} is in: ${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
 
-    if (minutes === 0 && seconds <= 59) {
+    if (hours === 0 && minutes === 0 && seconds <= 59) {
         countdownElement.classList.add("pulsing");
     } else {
         countdownElement.classList.remove("pulsing");
