@@ -253,11 +253,11 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("maghrib-time").innerText = maghribAdhanTime + " + 5 min";
 
             const iqamaTimes = {
-                "Fajr": "6:00 AM",
-                "Dhuhr": "12:45 PM",
-                "Asr": "3:45 PM",
+                "Fajr": "6:40 AM",
+                "Dhuhr": "1:45 PM",
+                "Asr": "5:00 PM",
                 "Maghrib": maghribIqamaTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-                "Isha": "7:40 PM"
+                "Isha": "8:50 PM"
             };
 
             let now = new Date();
