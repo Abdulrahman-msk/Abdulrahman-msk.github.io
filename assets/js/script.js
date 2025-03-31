@@ -255,7 +255,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const iqamaTimes = {
                 "Fajr": "6:00 AM",
                 "Dhuhr": "1:40 PM",
-                "Asr": "5:00 PM",
+                "Asr": "5:15 PM",
                 "Maghrib": maghribIqamaTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
                 "Isha": "9:20 PM"
             };
