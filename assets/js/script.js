@@ -257,7 +257,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 "Dhuhr": "1:40 PM",
                 "Asr": "5:45 PM",
                 "Maghrib": maghribIqamaTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-                "Isha": "10:25 PM"
+                "Isha": "10:15 PM"
             };
 
             let now = new Date();
